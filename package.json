@@ -1,0 +1,7 @@
+{
+  "name": "wishing-pim-services-ts",
+  "private": true,
+  "workspaces": [
+    "services/*"
+  ]
+}
