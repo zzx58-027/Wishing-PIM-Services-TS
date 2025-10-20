@@ -9,10 +9,11 @@ export default defineConfig({
       tasks: true,
       database: true,
     },
+    // https://github.com/nitrojs/nitro/issues/2232, auto imports not recommend, see for details, might be a bug.
+    imports: {},
     // preset: "standard", // Node Server
-    preset: "cloudflare_module",
+    preset: "cloudflare-module",
     compatibilityDate: "2024-09-19",
-    // @ts-ignore
     cloudflare: {
       deployConfig: true,
       nodeCompat: true,
@@ -26,21 +27,21 @@ export default defineConfig({
         r2_buckets: [
           {
             binding: "r2_temp",
-            bucket_name: "temp"
+            bucket_name: "temp",
           },
           {
             binding: "r2_main",
-            bucket_name: "wishing-pim"
-          }
+            bucket_name: "wishing-pim",
+          },
         ],
         d1_databases: [
           {
             binding: "d1",
             database_name: "wishing-pim",
-            database_id: "2d161239-9c42-4966-bdcc-d9b985a7afc6"
-          }
-        ]
-      }
+            database_id: "2d161239-9c42-4966-bdcc-d9b985a7afc6",
+          },
+        ],
+      },
     },
     database: {
       d1: {
@@ -61,8 +62,8 @@ export default defineConfig({
       },
       kv: {
         driver: "cloudflare-kv-binding",
-        binding: "kv"
-      }
+        binding: "kv",
+      },
     },
     // https://v3.nitro.build/config#openapi
     openAPI: {
@@ -75,5 +76,11 @@ export default defineConfig({
         version: "1.0",
       },
     },
+    runtimeConfig: {
+      nitro: {
+        envPrefix: "NITRO_",
+      },
+      ALI_FC_BASIC_AUTH: '',
+    }
   },
 });
