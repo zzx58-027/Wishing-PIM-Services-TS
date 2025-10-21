@@ -1,6 +1,7 @@
 {
   "name": "nitro-app",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "vite build",
     "dev": "vite dev",
@@ -11,5 +12,10 @@
   "devDependencies": {
     "nitro": "npm:nitro-nightly@latest",
     "vite": "latest"
+  },
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "llama-cloud-services": "^0.3.9",
+    "picocolors": "^1.1.1"
   }
 }

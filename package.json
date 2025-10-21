@@ -1,7 +1,7 @@
 {
-  "name": "wishing-pim-services-ts",
+  "name": "wishing-pim-servers-ts",
   "private": true,
   "workspaces": [
-    "services/*"
+    "servers/*"
   ]
 }
