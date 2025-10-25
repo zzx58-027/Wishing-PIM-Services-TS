@@ -1,0 +1,25 @@
+{
+  "name": "wishing-pim-server-elysia-0",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:watch": "bun run --watch src/index.ts",
+    "dev": "bun run src/index.ts"
+  },
+  "dependencies": {
+    "@elysiajs/eden": "^1.4.4",
+    "@elysiajs/openapi": "^1.4.11",
+    "@volcengine/tos-sdk": "^2.7.5",
+    "@zilliz/milvus2-sdk-node": "^2.6.2",
+    "aws4fetch": "^1.0.20",
+    "date-fns": "^4.1.0",
+    "elysia": "latest",
+    "picocolors": "^1.1.1",
+    "redis": "^5.9.0",
+    "unstorage": "^1.17.1"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "module": "src/index.js"
+}
